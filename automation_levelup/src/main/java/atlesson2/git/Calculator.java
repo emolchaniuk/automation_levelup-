@@ -6,8 +6,21 @@ public class Calculator {
         return a+b;
     }
 
-    public  int substract (int a, int b) {
+    public  double substract (double a, double b) {
         return a-b;
+    }
+
+    public double power (double a, int p) {
+        double res = 1.0;
+
+        if (p<0) {
+            throw new IllegalArgumentException("should be positive");
+        }
+
+        for (int i=0; i < p; i ++) {
+            res *= a;
+        }
+        return res;
     }
 
 }
